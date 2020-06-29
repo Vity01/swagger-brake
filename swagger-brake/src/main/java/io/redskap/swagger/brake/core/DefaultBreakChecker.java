@@ -28,6 +28,6 @@ class DefaultBreakChecker implements BreakChecker {
         if (newApi == null) {
             throw new IllegalArgumentException("newApi must be provided");
         }
-        return rules.stream().map(rule -> rule.checkRule(oldApi, newApi)).flatMap(Collection::stream).collect(toList());
+        return rules.parallelStream().map(rule -> rule.checkRule(oldApi, newApi)).flatMap(Collection::stream).collect(toList());
     }
 }

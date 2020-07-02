@@ -51,6 +51,10 @@ paths:
           schema:
             $ref: "#/definitions/Order"
         204:
+          description: "Deprecated, 200 should now be returned with information about what happened"
+          schema:
+            $ref: "#/responses/successNoResponse"
+        205:
           $ref: "#/responses/successNoResponse"
         400:
           description: "Invalid ID supplied"

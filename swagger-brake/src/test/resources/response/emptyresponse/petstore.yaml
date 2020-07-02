@@ -52,6 +52,7 @@ paths:
             $ref: "#/definitions/Order"
         204:
           description: "Deprecated, 200 should now be returned with information about what happened"
+          # this variation fails
           schema:
             $ref: "#/responses/successNoResponse"
         205:
